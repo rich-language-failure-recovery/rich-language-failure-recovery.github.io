@@ -250,6 +250,15 @@
       <p>
       TL;DR: We found visuomotor policies trained with <strong>rich language instructions</strong> and <strong>failure recovery behaviors</strong> demonstrate superior robustness and adaptability. Rich langauge instructions provide more sufficient details for failure recovery, such as failure analysis, spatial movements, target object attributes and the expected outcome, can serve as a form of regularization to prevent overfitting and improve generalization.</p>
       <br>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <!-- <h2 class="title is-3 is-centered has-text-centered">Video</h2> -->
+          <video id="teaser" muted playsinline controls height="100%">
+            <source src="./static/videos/summary_video.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p class="underline-caps is-size-5">
@@ -298,19 +307,6 @@
       text-decoration: underline;
     }
   </style>
-
-
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <h2 class="title is-3 is-centered has-text-centered">Video</h2>
-        <video id="teaser" muted playsinline controls height="100%">
-          <source src="./static/videos/summary_video.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-
     <div style="height: 20px;"></div>
 
     <div class="container">
@@ -366,7 +362,7 @@
     </div>
     <br>
     <h2 class="title is-4">Real World Videos (2X default speed)</h2>
-    <p class="is-size-5">We evaluate the <strong>RVT</strong> baseline, <strong>RACER-scratch </strong>(RACER trained on real-world data only), <strong>RACER-simple </strong>(RACER trained with simple instructions on both simulated and real-world data), and <strong>RACER-rich</strong> (RACER trained with rich instructions on both simulated and real-world data).</p> 
+    <p class="is-size-5">We evaluate the <strong>RVT</strong> baseline, <strong>RACER-scratch </strong>(RACER trained with rich instructions on real-world data only), <strong>RACER-simple </strong>(RACER trained with simple instructions on both simulated and real-world data), and <strong>RACER-rich</strong> (RACER trained with rich instructions on both simulated and real-world data).</p> 
     <p>(&rarr; means there is task goal online change to test model robustness.)</p>
     <br>
     <h2 class="title is-5">Task: Open Drawer</h2>
