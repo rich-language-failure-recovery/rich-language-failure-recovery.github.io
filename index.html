@@ -39,6 +39,27 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .columns.is-centered {
+      margin: 0 2rem; /* Add horizontal space between the two groups */
+    }
+  </style>
+
+  <style>
+    .column.is-half {
+      margin-right: 2rem; /* Adjust this value to increase the space */
+    }
+  </style>
+
+  <style>
+    .centered-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+  </style>
 </head>
 <body>
 
@@ -52,7 +73,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://rich-language-failure-recovery.github.io">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -130,7 +151,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -138,7 +159,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/"
@@ -146,7 +167,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon!)</span>
                   </a>
               </span>
             </div>
@@ -158,53 +179,101 @@
   </div>
 </section>
 
-<!-- Teaser Video -->
-<!-- <section class="hero teaser">
+<!-- Teaser Videos -->
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
+      <!-- First Video -->
+      <video id="teaser1" autoplay muted playsinline height="100%" width="48%">
+        <source src="./static/videos/sim_high_res9.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">RACER</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
+
+      <!-- Second Video -->
+      <video id="teaser2" autoplay muted playsinline height="100%" width="48%">
+        <source src="./static/videos/real_train_data_grid2.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
-</section> -->
+</section>
+
+
+<!-- Show more and show less button -->
+<script>
+  function toggleMoreVideos() {
+    var moreVideos = document.getElementById("moreVideos");
+    var showMoreBtn = document.getElementById("showMoreBtn");
+    if (moreVideos.style.display === "none") {
+      moreVideos.style.display = "block";
+      showMoreBtn.textContent = "Show less";
+    } else {
+      moreVideos.style.display = "none";
+      showMoreBtn.textContent = "Show more";
+    }
+  }
+</script>
+
+<script>
+  function toggleMoreVideos2() {
+    var moreVideos = document.getElementById("moreVideos2");
+    var showMoreBtn = document.getElementById("showMoreBtn2");
+    if (moreVideos.style.display === "none") {
+      moreVideos.style.display = "block";
+      showMoreBtn.textContent = "Show less";
+    } else {
+      moreVideos.style.display = "none";
+      showMoreBtn.textContent = "Show more";
+    }
+  }
+</script>
+
+<script>
+  function toggleMoreVideos3() {
+    var moreVideos = document.getElementById("moreVideos3");
+    var showMoreBtn = document.getElementById("showMoreBtn3");
+    if (moreVideos.style.display === "none") {
+      moreVideos.style.display = "block";
+      showMoreBtn.textContent = "Show less";
+    } else {
+      moreVideos.style.display = "none";
+      showMoreBtn.textContent = "Show more";
+    }
+  }
+</script>
+
+<script>
+  function toggleMoreVideos4() {
+    var moreVideos = document.getElementById("moreVideos4");
+    var showMoreBtn = document.getElementById("showMoreBtn4");
+    if (moreVideos.style.display === "none") {
+      moreVideos.style.display = "block";
+      showMoreBtn.textContent = "Show less";
+    } else {
+      moreVideos.style.display = "none";
+      showMoreBtn.textContent = "Show more";
+    }
+  }
+</script>
+
+<script>
+  function toggleMoreVideos5() {
+    var moreVideos = document.getElementById("moreVideos5");
+    var showMoreBtn = document.getElementById("showMoreBtn5");
+    if (moreVideos.style.display === "none") {
+      moreVideos.style.display = "block";
+      showMoreBtn.textContent = "Show less";
+    } else {
+      moreVideos.style.display = "none";
+      showMoreBtn.textContent = "Show more";
+    }
+  }
+</script>
 
 <!-- Abstract & Overview Video -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Developing robust and correctable and interactive visuomotor policies for object manipulation 
-            is challenging due to the lack of mechanisms for self-recovery from failures and the limitations 
-            of simple language instructions in guiding robot actions. To address these issues, we introduce 
-            Rich languAge-guided failure reCovERy (RACER) policy, a supervisor-actor framework that 
-            combines failure recovery data with rich language descriptions to enhance robot control. 
-            RACER features a vision-language model (VLM) that acts as an online supervisor, providing 
-            detailed guidance for error correction and task execution, and a language-conditioned visuomotor 
-            policy as an actor to predict next action. By augmenting the RLbench dataset with fine-grained 
-            language annotations and recovery trajectories, we demonstrate how our method significantly 
-            improves policy robustness and sim-to-real transfer capabilities. Specifically, our experimental 
-            results demonstrate that RACER outperforms the state-of-the-art Robotic View Transformer 
-            (RVT) in various scenarios, including standard long-horizon tasks, dynamic goal changes, and 
-            zero-shot unseen tasks, achieving superior performance in both simulated and real-world environments.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview Video</h2>
         <div class="publication-video">
@@ -212,12 +281,1315 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
+
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3 is-centered has-text-centered">Overview Video</h2>
+        <video id="teaser" muted playsinline controls height="100%">
+          <source src="./static/videos/summary_video.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+
+    <style>
+      .underline-caps span {
+        text-decoration: underline;
+      }
+    </style>
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="underline-caps">
+            Developing robust and correctable visuomotor policies for robotic manipulation 
+            is challenging due to the lack of self-recovery mechanisms from failures and 
+            the limitations of simple language instructions in guiding robot actions. 
+            To address these issues, we propose a scalable data generation pipeline that 
+            automatically augments expert demonstrations with failure recovery trajectories 
+            and fine-grained language annotations for training. We then introduce 
+            <span>R</span>ich langu<span>A</span>ge-guided failure re<span>C</span>ov<span>E</span>Ry 
+            (RACER), a supervisor-actor framework, 
+            which combines failure recovery data with rich language descriptions to enhance 
+            robot control. RACER features a vision-language model (VLM) that acts as an online 
+            supervisor, providing detailed language guidance for error correction and task 
+            execution, and a language-conditioned visuomotor policy as an actor to predict 
+            the next actions. Our experimental results show that RACER outperforms the 
+            state-of-the-art Robotic View Transformer (RVT) on RLbench across various 
+            evaluation settings, including standard long-horizon tasks, dynamic goal-change 
+            tasks and zero-shot unseen tasks, achieving superior performance in both 
+            simulated and real world environments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div class="container">
+      <h2 class="title is-centered has-text-centered">RACER Framework</h2>
+      <img src="./static/images/model_framework.png" alt="RACER Framework Overview" class="centered-image">
+    </div>
+    
+    <div style="height: 40px;"></div>
+
+    <div class="container">
+      <h2 class="title is-centered has-text-centered">Data Augmentation</h2>
+      <img src="./static/images/data_pipeline.png" alt="Data Augmentation Overview" class="centered-image">
+    </div>
   </div>
 </section>
 
-<section class="hero is-light is-small">
+<!-- REAL Experimental Results-->
+<section class="section">
+<!-- OPEN DRAWER -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Experimental Results</h2>
+    </div>
+    <p>We trained RVT, RACER-scratch, RACER-simple, and RACER-rich (RACER) models in simulation then few-shot transferred to the real world using real demonstrations for the real world evaluation.</p>
+    <br>
+    <h2 class="title is-4">Real World Videos (2X default speed)</h2>
+    
+    <h2 class="title is-5">Task: Open Drawer</h2>
+    <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Open the (top &rarr; bottom &rarr; top) drawer.</h2> 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/open-drawer/ep9(main)/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RVT
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/open-drawer/ep9(main)/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/open-drawer/ep9(main)/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/real/open-drawer/ep9(main)/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#76B900"><b>Success</b></font>: RACER-rich
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- OPEN DRAWER: Hidden additional rows -->
+    <div id="moreVideos" style="display: none;">
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <!-- OPEN DRAWER EP 7 -->
+      <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Open the (top &rarr; bottom) drawer.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep7/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep7/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep7/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/open-drawer/ep7/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPEN DRAWER EP 1 -->
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <h2 class="title is-6" style="text-align: center;">Open the top drawer.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep1/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep1/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/open-drawer/ep1/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/open-drawer/ep1/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show more button -->
+    <div class="columns">
+      <div class="column">
+        <a id="showMoreBtn" style="cursor: pointer; text-decoration: underline;" onclick="toggleMoreVideos()">Show more</a>
+      </div>
+    </div>
+  </div>
+
+<!-- PUT ITEM ON SHELF -->
+<div style="height: 40px;"></div> <!-- Blank space div -->
+  <div class="container is-max-desktop">
+    <h2 class="title is-5">Task: Put Item on Shelf</h2>
+    <h2 class="title is-6" style="text-align: center;">Put the Oreo on the top shelf.</h2> 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/put-item-in-shelf/ep9(main)/RVT-finish-website.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RVT
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/put-item-in-shelf/ep9(main)/RACER-scratch-finish-website.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/put-item-in-shelf/ep9(main)/RACER-simple-finish-website.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/real/put-item-in-shelf/ep9(main)/RACER-finish-website.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#76B900"><b>Success</b></font>: RACER-rich
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- PUT ITEM IN SHELF: Hidden additional rows -->
+    <div id="moreVideos2" style="display: none;">
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <!-- PUT ITEM IN SHELF EP 6 -->
+      <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Put the Oreo on the (top &rarr; bottom) shelf.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep6/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep6/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep6/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/put-item-in-shelf/ep6/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUT ITEM IN SHELF EP 2 -->
+      <h2 class="title is-6" style="text-align: center;">Put the Oreo on the bottom shelf.</h2> 
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep2/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep2/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/put-item-in-shelf/ep2/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/put-item-in-shelf/ep2/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show more button -->
+    <div class="columns">
+      <div class="column">
+        <a id="showMoreBtn2" style="cursor: pointer; text-decoration: underline;" onclick="toggleMoreVideos2()">Show more</a>
+      </div>
+    </div>
+  </div>
+
+<!-- PUSH BUTTON -->
+<div style="height: 40px;"></div> <!-- Blank space div -->
+  <div class="container is-max-desktop">
+    <h2 class="title is-5">Task: Push Buttons</h2>
+    <h2 class="title is-6" style="text-align: center;">Push the blue button, then the red button.</h2> 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/push-button/ep9(main)/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RVT
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/push-button/ep9(main)/RACER-scratch.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/push-button/ep9(main)/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/real/push-button/ep9(main)/RACER.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#76B900"><b>Success</b></font>: RACER-rich
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- PUSH BUTTON: Hidden additional rows -->
+    <div id="moreVideos3" style="display: none;">
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <!-- PUSH BUTTON EP 7 -->
+      <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Push the red button, then the (green &rarr; blue) button.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep7/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep7/RACER-scratch.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep7/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/push-button/ep7/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PUSH BUTTON EP 5 -->
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Push the (red &rarr; blue) button.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep5/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep5/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/push-button/ep5/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/push-button/ep5/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show more button -->
+    <div class="columns">
+      <div class="column">
+        <a id="showMoreBtn3" style="cursor: pointer; text-decoration: underline;" onclick="toggleMoreVideos3()">Show more</a>
+      </div>
+    </div>
+  </div>
+
+<!-- PICK AND PLACE FRUIT -->
+<div style="height: 40px;"></div> <!-- Blank space div -->
+  <div class="container is-max-desktop">
+    <h2 class="title is-5">Task: Pick and Place Fruit</h2>
+    <h2 class="title is-6" style="text-align: center;">[Task Goal Change] Put the orange into the (red &rarr; white) bowl.</h2> 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/pick-and-place-fruit/ep5(main)/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RVT
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/pick-and-place-fruit/ep5(main)/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/pick-and-place-fruit/ep5(main)/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/real/pick-and-place-fruit/ep5(main)/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#76B900"><b>Success</b></font>: RACER-rich
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- PICK AND PLACE FRUIT: Hidden additional rows -->
+    <div id="moreVideos4" style="display: none;">
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <!-- PICK AND PLACE FRUIT EP 3 -->
+      <h2 class="title is-6" style="text-align: center;">Put the lemon into the white bowl.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep3/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep3/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep3/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/pick-and-place-fruit/ep3/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PICK AND PLACE FRUIT EP 1 -->
+      
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <h2 class="title is-6" style="text-align: center;">Put the lemon into the red bowl.</h2> 
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep1/RVT-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep1/RACER-scratch-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RACER-scratch
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+        <source src="static/videos/real/pick-and-place-fruit/ep1/RACER-simple-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-simple
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/real/pick-and-place-fruit/ep1/RACER-finish.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER-rich
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show more button -->
+    <div class="columns">
+      <div class="column">
+        <a id="showMoreBtn4" style="cursor: pointer; text-decoration: underline;" onclick="toggleMoreVideos4()">Show more</a>
+      </div>
+    </div>
+  </div>
+<!-- </section> -->
+
+
+<!-- Simulation Videos -->
+<div style="height: 80px;"></div> <!-- Blank space div -->
+<div class="container is-max-desktop">
+  <h2 class="title is-4">Simulation Videos</h2>
+  We trained RVT, RACER-scratch, RACER-simple, and RACER-rich (RACER) models in simulation and evaluated them in simulation. RACER + H indicates that human instruction input is used during evaluation.
+  <div style="height: 20px;"></div> <!-- Blank space div -->
+  <h2 class="title is-5">Failure Recovery with RACER from RVT Failure Event</h2>
+  <div class="columns is-centered">
+    <!-- Close Jar -->
+    <div class="column is-half">
+      <h3 class="title is-6" style="text-align: center;">Close the navy jar.</h3>
+      <!-- <h4 class="subtitle is-6" style="text-align: center;">Close the navy jar.</h4> -->
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/sim/RVT-fail&RACER-correct/closejar-rvt.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="content">
+            <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/sim/RVT-fail&RACER-correct/closejar-racer.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stack block -->
+    <div class="column is-half">
+      <h3 class="title is-6" style="text-align: center;">Stack four purple blocks.</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="content">
+            <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-rvt.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center;">
+              <font color="#FF4500"><b>Failure</b></font>: RVT
+            </p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="content">
+            <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+              <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-racer.mp4" type="video/mp4">
+            </video>
+            <p style="text-align: center;">
+              <font color="#76B900"><b>Success</b></font>: RACER
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="moreVideos5" style="display: none;">
+    <div class="columns is-centered">
+      <!-- Light bulb -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Screw in the magenta light bulb.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/lightbulbin-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/lightbulbin-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide Block -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Slide block to the green target.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/slideblock-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/slideblock-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <!-- First group -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Stack the wine bottle to the left rack.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/putwine-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/putwine-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Put Item in Cupboard -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Put the coffee in the cupboard.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/cupboard-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/cupboard-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Show more button -->
+    <div class="columns">
+      <div class="column">
+        <a id="showMoreBtn5" style="cursor: pointer; text-decoration: underline;" onclick="toggleMoreVideos5()">Show more</a>
+      </div>
+    </div>
+
+
+    <div style="height: 40px;"></div> <!-- Blank space div -->
+    <h2 class="title is-5">Task Goal Change</h2>
+    <div class="columns is-centered">
+      <!-- Close Jar -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Close the (olive &rarr; cyan) jar.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/task-goal-change/closejar-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/task-goal-change/closejar-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stack block -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Screw in the (gray &rarr; purple) light bulb.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/task-goal-change/lightbulb-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/task-goal-change/lightbulb-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="moreVideos5" style="display: none;"> -->
+    <div class="columns is-centered">
+        <!-- Light bulb -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Open the (middle &rarr; bottom) drawer.</h3>
+          <div style="height: 18px;"></div> <!-- Blank space div -->
+
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/task-goal-change/opendrawer-rvt.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RVT
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/task-goal-change/opendrawer-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide Block -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Push the (maroon &rarr; green) button, then push the (green &rarr; maroon) button.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/task-goal-change/pushbutton-rvt.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RVT
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/task-goal-change/pushbutton-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div style="height: 40px;"></div> <!-- Blank space div -->
+    <h2 class="title is-5">Unseen Tasks</h2>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Close the bottom drawer.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/unseen-task/closedrawer-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/unseen-task/closedrawer-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stack block -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Move the block onto the green target.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/unseen-task/moveblock-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/unseen-task/moveblock-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="moreVideos5" style="display: none;"> -->
+    <div class="columns is-centered">
+        <!-- Light bulb -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Pick up the yellow cup.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/unseen-task/pickcup-rvt.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RVT
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/unseen-task/pickcup-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide Block -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Reach the red target.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/unseen-task/reachtarget-rvt.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RVT
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/unseen-task/reachtarget-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 40px;"></div> <!-- Blank space div -->
+      <h2 class="title is-5">RACER with Human Language Intervention</h2>
+      RACER displays strong capability of not only understanding VLM-generated instructions but also general human languages that can enable recovery from failure events. 
+      <div class="columns is-centered">
+        <!-- Close Jar -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Sweep dirt to the short dustpan.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/dustpan-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RACER
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/dustpan-human.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER + H
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Stack block -->
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Put the money in the bottom shelf.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/putmoney-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RACER
+                </p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/putmoney-human.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER + H
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <div id="moreVideos5" style="display: none;"> -->
+      <div class="columns is-centered">
+          <!-- Light bulb -->
+          <div class="column is-half">
+            <h3 class="title is-6" style="text-align: center;">Put the cylinder in the shape sorter.</h3>
+            <div class="columns">
+              <div class="column">
+                <div class="content">
+                  <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                    <source src="static/videos/sim/human-intervene/sortshape-racer.mp4" type="video/mp4">
+                  </video>
+                  <p style="text-align: center;">
+                    <font color="#FF4500"><b>Failure</b></font>: RACER
+                  </p>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="content">
+                  <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                    <source src="static/videos/sim/human-intervene/sortshape-human.mp4" type="video/mp4">
+                  </video>
+                  <p style="text-align: center;">
+                    <font color="#76B900"><b>Success</b></font>: RACER + H
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide Block -->
+          <div class="column is-half">
+            <h3 class="title is-6" style="text-align: center;">Stack the other cups on top of the maroon cup.</h3>
+            <div class="columns">
+              <div class="column">
+                <div class="content">
+                  <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                    <source src="static/videos/sim/human-intervene/stackcup-racer.mp4" type="video/mp4">
+                  </video>
+                  <p style="text-align: center;">
+                    <font color="#FF4500"><b>Failure</b></font>: RACER
+                  </p>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="content">
+                  <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                    <source src="static/videos/sim/human-intervene/stackcup-human.mp4" type="video/mp4">
+                  </video>
+                  <p style="text-align: center;">
+                    <font color="#76B900"><b>Success</b></font>: RACER + H
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- FAILURE CASES -->
+<div style="height: 40px;"></div> <!-- Blank space div -->
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Failure Cases</h2>
+    Due to the limited visual understanding capabilities, the current Vision-Language Model (LLaVA-LLaMA3-8B) occasionally fails to accurately recognize task failures, leading to the generation of hallucinated instructions. Consequently, the visuomotor policy may also predict inappropriate actions.
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/failure/open-drawer-ep3-compress.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/failure/pick-fruit-ep4-compress.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+	    <source src="static/videos/real/failure/push-button-ep6-compress.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%" onloadstart="this.playbackRate=1">
+            <source src="static/videos/real/failure/put-item-ep3-compress.mp4" type="video/mp4" class="figure-img img-fluid rounded">
+          </video>
+          <p style="text-align: center;">
+            <font color="#FF4500"><b>Failure</b></font>: RACER
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+    
+
+<!-- Sample Carousel Section (remove) -->
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -272,16 +1644,16 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
-<section class="section">
+<!-- Sample Section (remove) -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Failure Recovery. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Failure Recovery</h2>
@@ -294,9 +1666,8 @@
           </video>
         </div>
       </div>
-      <!--/ Failure Recovery. -->
+      
 
-      <!-- Rich language. -->
       <div class="column">
         <h2 class="title is-3">Rich Language</h2>
         <div class="columns is-centered">
@@ -313,12 +1684,13 @@
         </div>
       </div>
     </div>
-    <!--/ Rich language. -->
+    
 
   </div>
-</section>
+</section> -->
 
 
+<!-- Bibtex -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -328,6 +1700,7 @@
 </section>
 
 
+<!-- Cite Source Template -->
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
