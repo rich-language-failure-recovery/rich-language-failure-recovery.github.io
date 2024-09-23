@@ -322,7 +322,14 @@
       <h2 class="title is-centered has-text-centered">Data Augmentation Pipeline</h2>
       <p class="is-centered has-text-centered is-size-5">We propose a scalable rich language-guided failure recovery data augmentation pipeline to collect new trajectories from expert demos.</p>
       <br>
-      <img src="./static/images/data_pipeline_final-website.png" alt="Data Augmentation Overview" class="centered-image">
+      <div class="container"></div>
+        <div class="columns is-centered has-text-centered">
+          <video id="datavideo" muted playsinline controls autoplay="" class="center" width="86%">
+            <source src="./static/videos/data-video.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      <!-- <img src="./static/images/data_pipeline_final-website.png" alt="Data Augmentation Overview" class="centered-image"> -->
     </div>
   </div>
 <br>
@@ -1109,33 +1116,6 @@
 
     <div class="columns is-centered">
 
-      <!-- Stack block -->
-      <div class="column is-half">
-        <h3 class="title is-6" style="text-align: center;">Task Goal: Stack four purple blocks.</h3>
-        <div class="columns">
-          <div class="column">
-            <div class="content">
-              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-rvt.mp4" type="video/mp4">
-              </video>
-              <p style="text-align: center;">
-                <font color="#FF4500"><b>Failure</b></font>: RVT
-              </p>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="content">
-              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-racer.mp4" type="video/mp4">
-              </video>
-              <p style="text-align: center;">
-                <font color="#76B900"><b>Success</b></font>: RACER
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Put Item in Cupboard -->
       <div class="column is-half">
         <h3 class="title is-6" style="text-align: center;">Task Goal: Put the coffee in the cupboard.</h3>
@@ -1155,6 +1135,34 @@
             <div class="content">
               <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
                 <source src="static/videos/sim/RVT-fail&RACER-correct/cupboard-racer.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#76B900"><b>Success</b></font>: RACER
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stack block -->
+      <div class="column is-half">
+        <h3 class="title is-6" style="text-align: center;">Task Goal: Stack four purple blocks.</h3>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <video id="racer-simple-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-rvt.mp4" type="video/mp4">
+              </video>
+              <p style="text-align: center;">
+                <font color="#FF4500"><b>Failure</b></font>: RVT
+              </p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="content">
+              <video id="racer-rich-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                <source src="static/videos/sim/RVT-fail&RACER-correct/stackblock-racer.mp4" type="video/mp4">
               </video>
               <p style="text-align: center;">
                 <font color="#76B900"><b>Success</b></font>: RACER
@@ -1423,12 +1431,12 @@
       <div class="columns is-centered">
         <!-- Close Jar -->
         <div class="column is-half">
-          <h3 class="title is-6" style="text-align: center;">Task Goal: Sweep dirt to the short dustpan.</h3>
+          <h3 class="title is-6" style="text-align: center;">Task Goal: Put the cylinder in the shape sorter.</h3>
           <div class="columns">
             <div class="column">
               <div class="content">
                 <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                  <source src="static/videos/sim/human-intervene/dustpan-racer.mp4" type="video/mp4">
+                  <source src="static/videos/sim/human-intervene/sortshape-racer.mp4" type="video/mp4">
                 </video>
                 <p style="text-align: center;">
                   <font color="#FF4500"><b>Failure</b></font>: RACER
@@ -1439,7 +1447,7 @@
             <div class="column">
               <div class="content">
                 <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                  <source src="static/videos/sim/human-intervene/dustpan-human.mp4" type="video/mp4">
+                  <source src="static/videos/sim/human-intervene/sortshape-human.mp4" type="video/mp4">
                 </video>
                 <p style="text-align: center;">
                   <font color="#76B900"><b>Success</b></font>: RACER + H
@@ -1448,6 +1456,7 @@
             </div>
           </div>
         </div>
+        
         
         <!-- Stack block -->
         <div class="column is-half">
@@ -1481,32 +1490,33 @@
       <!-- <div id="moreVideos5" style="display: none;"> -->
       <div class="columns is-centered">
           <!-- Light bulb -->
-          <div class="column is-half">
-            <h3 class="title is-6" style="text-align: center;">Task Goal: Put the cylinder in the shape sorter.</h3>
-            <div class="columns">
-              <div class="column">
-                <div class="content">
-                  <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                    <source src="static/videos/sim/human-intervene/sortshape-racer.mp4" type="video/mp4">
-                  </video>
-                  <p style="text-align: center;">
-                    <font color="#FF4500"><b>Failure</b></font>: RACER
-                  </p>
-                </div>
+          
+        <div class="column is-half">
+          <h3 class="title is-6" style="text-align: center;">Task Goal: Sweep dirt to the short dustpan.</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="content">
+                <video id="rvt-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/dustpan-racer.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#FF4500"><b>Failure</b></font>: RACER
+                </p>
               </div>
-              
-              <div class="column">
-                <div class="content">
-                  <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
-                    <source src="static/videos/sim/human-intervene/sortshape-human.mp4" type="video/mp4">
-                  </video>
-                  <p style="text-align: center;">
-                    <font color="#76B900"><b>Success</b></font>: RACER + H
-                  </p>
-                </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <video id="racer-scratch-video" autoplay controls muted loop playsinline width="100%" onloadstart="this.playbackRate=1">
+                  <source src="static/videos/sim/human-intervene/dustpan-human.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">
+                  <font color="#76B900"><b>Success</b></font>: RACER + H
+                </p>
               </div>
             </div>
           </div>
+        </div>
           
           <!-- Slide Block -->
           <div class="column is-half">
